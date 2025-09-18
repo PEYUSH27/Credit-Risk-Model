@@ -12,41 +12,41 @@ Loan_default.csv: This dataset contains borrower information and loan details in
 Pred123.xlsx: This is a new dataset on which predictions for loan default probabilities are made using the trained model.
 
 Key Steps in the Notebook
-Data Loading and Cleaning
+1-Data Loading and Cleaning
 
-LoanID column is dropped as it is not useful for modeling.
+2-LoanID column is dropped as it is not useful for modeling.
 
-Missing values are handled by dropping rows with nulls in key features.
+3-Missing values are handled by dropping rows with nulls in key features.
 
-Feature Encoding and Scaling
+4-Feature Encoding and Scaling
 
-Categorical features are label encoded for model compatibility.
+5-Categorical features are label encoded for model compatibility.
 
-Features are standardized using StandardScaler to improve model performance.
+6-Features are standardized using StandardScaler to improve model performance.
 
-Feature Selection
+7-Feature Selection
 
-L1 penalty logistic regression is used for selecting important features by penalizing non-important ones.
+8-L1 penalty logistic regression is used for selecting important features by penalizing non-important ones.
 
-The model is trained using only the selected important features.
+9-The model is trained using only the selected important features.
 
-Model Training and Evaluation
+10-Model Training and Evaluation
 
-Train-test split with 70:30 ratio is applied.
+11-Train-test split with 70:30 ratio is applied.
 
-Logistic Regression model is trained on the training set.
+12-Logistic Regression model is trained on the training set.
 
-Model is evaluated with classification report and confusion matrix.
+13-Model is evaluated with classification report and confusion matrix.
 
-Overall model accuracy is around 88.7%. Precision, recall, and F1-score metrics are inspected, noting class imbalance effects.
+14-Overall model accuracy is around 88.7%. Precision, recall, and F1-score metrics are inspected, noting class imbalance effects.
 
-Model Interpretation
+15-Model Interpretation
 
-Logistic regression coefficients and intercept are extracted to formulate the logistic regression equation indicating the relationship between input features and default probability.
+16-Logistic regression coefficients and intercept are extracted to formulate the logistic regression equation indicating the relationship between input features and default probability.
 
-Statistical summary of model including p-values for coefficients is generated via statsmodels.Logit.
+17-Statistical summary of model including p-values for coefficients is generated via statsmodels.Logit.
 
-Prediction on New Data
+18-Prediction on New Data
 
 The new dataset (Pred123.xlsx) is processed similarly (encoding and scaling).
 
